@@ -1,6 +1,7 @@
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import org.junit.Test;
 
 class Solution {
     public static int[][] diagonalSort(int[][] mat) {
@@ -37,4 +38,14 @@ class Solution {
             return mat;
     }
 
+}
+public class ExampleTests {
+    @Test
+    public void test_1() {//
+        int[][] test = {{3,3,1,1},      //1 1 3 3  //1 1 1 2 //1 1 1 1 // 1 1 1 1 1 1 2 2 2 2 3 3
+                        {2,2,1,2},      //1 2 2 2  //1 1 2 2 //1 2 2 2
+                        {1,1,1,2}};     //1 1 1 2  //1 2 3 3 //1 2 3 3
+        int[][] result = {{1,1,1,1}, {1,2,2,2}, {1,2,3,3}};
+        assertEquals(result, Solution.diagonalSort(test));
+    }
 }
