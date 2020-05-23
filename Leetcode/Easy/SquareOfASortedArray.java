@@ -3,6 +3,7 @@ import org.junit.Assert;
 import org.junit.Test;
 import java.util.Arrays;
 
+
 class Solution {
     public int[] sortedSquares(int[] A) {
         for(int i = 0; i < A.length; i++){
